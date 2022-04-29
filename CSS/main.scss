@@ -1,0 +1,254 @@
+// Import the colors sass file.
+@import "./SASS/variables/color";
+
+// Import the global rules file.
+@import "./SASS/layout/global-rules";
+
+// Variables:
+
+$top-bottom-padding: 5rem;
+$left-right-padding: 1rem;
+$section-height: 20vh;
+$menu-height: 5vh;
+
+// Mixins:
+
+@mixin flex() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin menuButton($height, $margin) {
+  width: 45%;
+  height: #{$height};
+  border: none;
+  background-color: transparent;
+  font-size: larger;
+  margin-bottom: $margin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #{$medium-gray};
+  cursor: pointer;
+}
+
+@mixin menuDesktop($width, $height) {
+  height: #{$height};
+  width: #{$width};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.218);
+  background-color: #{$almost-white};
+  margin-left: 0.8rem;
+  cursor: pointer;
+}
+
+body {
+  background-color: #{$almost-white};
+}
+
+/* Starting the header styles for mobile screens */
+
+.header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #{$medium-gray};
+}
+
+.header .sections {
+  width: 70%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #{$almost-white};
+  padding: #{$top-bottom-padding} #{$left-right-padding};
+  display: grid;
+  //   display: block;
+}
+
+.header .sections .close-menu {
+  position: fixed;
+  transform: translate(12rem, -3rem);
+  cursor: pointer;
+}
+
+.features {
+  height: #{$section-height};
+}
+
+.features .features-menu div {
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.features button,
+.company button {
+  @include menuButton(#{$menu-height}, 1rem);
+}
+
+.features .features-btn:hover,
+.company .company-btn {
+  color: #{$almost-black};
+}
+
+.career,
+.about {
+  @include menuButton(0.5rem, -20px);
+}
+
+.header .career:hover,
+.header .about:hover {
+  color: #{$almost-black};
+}
+
+.features .features-menu,
+.company .company-menu {
+  height: 15vh;
+  @include flex();
+  margin-left: 2rem;
+}
+
+.far-buttons {
+  width: 100%;
+  height: 12vh;
+  @include flex();
+  align-items: center;
+
+  button {
+    width: 70%;
+    height: 5vh;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #{$medium-gray};
+  }
+
+  & > button + button {
+    border: 1px solid black;
+    border-radius: 2rem;
+  }
+
+  & > button:hover,
+  & > button + button:hover {
+    color: #{$almost-black};
+  }
+}
+
+/* Ending  the header styles for mobile screens */
+
+/* Starting the header styles for desktop screens */
+
+@media only screen and (min-width: 786px) {
+  .container .header {
+    width: 100%;
+    height: 8vh;
+    padding: 2rem;
+    color: #{$medium-gray};
+  }
+
+  .header .logo-pic {
+    transform: translateY(-0.5rem);
+  }
+
+  .header .sections {
+    width: 80%;
+    height: 3vh;
+    position: fixed;
+    left: 10%;
+    top: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header .sections .features button,
+  .header .sections .company button {
+    width: 7rem;
+    height: 3rem;
+    background-color: transparent;
+    color: #{$medium-gray};
+    border: none;
+    font-size: medium;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1rem;
+    transform: translateY(-1rem);
+    margin-bottom: 0;
+  }
+
+  .header .sections .features .features-menu {
+    @include menuDesktop(9rem, 12rem);
+  }
+
+  .header .sections .features .features-menu div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: small;
+  }
+
+  .header .sections .company .company-menu {
+    @include menuDesktop(7rem, 10rem);
+  }
+
+  .header .sections .company .company-menu p {
+    font-size: small;
+    padding-left: 1.5rem;
+  }
+
+  .header .career,
+  .header .about {
+    width: 10rem;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    color: #{$medium-gray};
+    font-size: medium;
+    text-align: left;
+    transform: translateY(-1.5rem);
+  }
+
+  .header .career {
+    width: 2rem;
+  }
+
+  .far-buttons {
+    flex-direction: row;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .far-buttons button {
+    width: 40%;
+    height: 2rem;
+    border: none;
+    color: #{$medium-gray};
+    background-color: transparent;
+    font-size: medium;
+    transform: translateY(-2.2rem);
+  }
+
+  .far-buttons > button + button {
+    border: 1px solid #{$medium-gray};
+    border-radius: 1rem;
+  }
+
+  .header .sections .close-menu,
+  .header .burger-menu {
+    display: none;
+  }
+}
+
+/* Ending the header styles for desktop screens */
