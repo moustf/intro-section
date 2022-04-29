@@ -64,14 +64,18 @@ body {
 
 .header .sections {
   width: 70%;
-  height: 100vh;
+  height: 50vh;
   position: fixed;
   right: 0;
   top: 0;
   background-color: #{$almost-white};
   padding: #{$top-bottom-padding} #{$left-right-padding};
   display: grid;
-  //   display: block;
+  display: none;
+}
+
+.burger-menu {
+  cursor: pointer;
 }
 
 .header .sections .close-menu {
@@ -80,8 +84,18 @@ body {
   cursor: pointer;
 }
 
-.features {
-  height: #{$section-height};
+.wrapper {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.73);
+  display: none;
+}
+
+.arrow-up {
+  display: none;
 }
 
 .features .features-menu div {
@@ -97,13 +111,18 @@ body {
 }
 
 .features .features-btn:hover,
-.company .company-btn {
+.company .company-btn:hover {
   color: #{$almost-black};
+}
+
+.features .features-btn img,
+.company .company-btn img {
+  width: 1rem;
 }
 
 .career,
 .about {
-  @include menuButton(0.5rem, -20px);
+  @include menuButton(4rem, -20px);
 }
 
 .header .career:hover,
@@ -116,6 +135,7 @@ body {
   height: 15vh;
   @include flex();
   margin-left: 2rem;
+  display: none;
 }
 
 .far-buttons {
@@ -156,9 +176,9 @@ body {
     color: #{$medium-gray};
   }
 
-  .header .logo-pic {
-    transform: translateY(-0.5rem);
-  }
+  // .header .logo-pic {
+  //   // transform: translateY(-0.5rem);
+  // }
 
   .header .sections {
     width: 80%;
@@ -173,22 +193,28 @@ body {
 
   .header .sections .features button,
   .header .sections .company button {
-    width: 7rem;
+    width: 10rem;
     height: 3rem;
     background-color: transparent;
     color: #{$medium-gray};
     border: none;
     font-size: medium;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding-bottom: 1rem;
-    transform: translateY(-1rem);
+    // transform: translateY(-1rem);
     margin-bottom: 0;
+  }
+
+  .header .sections .features button img,
+  .header .sections .company button img {
+    margin-left: 1rem;
   }
 
   .header .sections .features .features-menu {
     @include menuDesktop(9rem, 12rem);
+    display: none;
   }
 
   .header .sections .features .features-menu div {
@@ -200,6 +226,7 @@ body {
 
   .header .sections .company .company-menu {
     @include menuDesktop(7rem, 10rem);
+    display: none;
   }
 
   .header .sections .company .company-menu p {
@@ -216,7 +243,7 @@ body {
     color: #{$medium-gray};
     font-size: medium;
     text-align: left;
-    transform: translateY(-1.5rem);
+    transform: translateY(-0.5rem);
   }
 
   .header .career {
@@ -247,6 +274,10 @@ body {
 
   .header .sections .close-menu,
   .header .burger-menu {
+    display: none;
+  }
+
+  .wrapper {
     display: none;
   }
 }
