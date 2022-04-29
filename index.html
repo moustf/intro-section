@@ -1,39 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg" />
+    <!-- Font family links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main style page -->
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <figure>
+          <img src="./images/logo.svg" class="logo-pic" alt="logo picture" />
+        </figure>
+        <div class="menu">
+          <img
+            src="./images/icon-menu.svg"
+            class="burger-menu"
+            alt="burger menu"
+          />
+          <div class="sections">
+            <img
+              src="./images/icon-close-menu.svg"
+              class="close-menu"
+              alt="close icon"
+            />
+            <section class="features">
+              <button type="button">
+                Features
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  class="arrow-down"
+                  alt="arrow down"
+                />
+              </button>
+              <div class="features-menu">
+                <div class="todo-list">
+                  <img
+                    src="./images/icon-todo.svg"
+                    class="todo-icon"
+                    alt="todo icon"
+                  />
+                  <span>Todo List</span>
+                </div>
+                <div class="calendar">
+                  <img
+                    src="./images/icon-calendar.svg"
+                    class="calendar-icon"
+                    alt="calendar icon"
+                  />
+                  <span>Calendar</span>
+                </div>
+                <div class="reminders">
+                  <img
+                    src="./images/icon-reminders.svg"
+                    class="reminders-icon"
+                    alt="reminders icon"
+                  />
+                  <span>Reminders</span>
+                </div>
+                <div class="planning">
+                  <img
+                    src="./images/icon-planning.svg"
+                    class="planning-icon"
+                    alt="planning icon"
+                  />
+                  <span>Planning</span>
+                </div>
+              </div>
+            </section>
+            <section class="company">
+              <button type="button">
+                Company
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  class="arrow-down"
+                  alt="arrow down"
+                />
+              </button>
+              <div class="company-menu">
+                <p class="history">History</p>
+                <p class="team">Our team</p>
+                <p class="blog">Blog</p>
+              </div>
+            </section>
+            <button type="button" class="career">Career</button>
+            <button type="button" class="about">About</button>
+            <section class="far-buttons">
+              <button type="button">Login</button>
+              <button type="button">Register</button>
+            </section>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- Features Company Careers About Login Register Make remote work Get your team
+    in sync, no matter your location. Streamline processes, create team rituals,
+    and watch productivity soar. Learn more -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="./JavaScript/index.js"></script>
+  </body>
 </html>
