@@ -31,6 +31,20 @@ $menu-height: 5vh;
   align-items: center;
   cursor: pointer;
   color: #{$medium-gray};
+  cursor: pointer;
+}
+
+@mixin menuDesktop($width, $height) {
+  height: #{$height};
+  width: #{$width};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.218);
+  background-color: #{$almost-white};
+  margin-left: 0.8rem;
+  cursor: pointer;
 }
 
 body {
@@ -38,6 +52,7 @@ body {
 }
 
 /* Starting the header styles for mobile screens */
+
 .header {
   width: 100%;
   height: 10vh;
@@ -48,15 +63,15 @@ body {
 }
 
 .header .sections {
-  width: 65%;
+  width: 70%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
-  background-color: #eee;
+  background-color: #{$almost-white};
   padding: #{$top-bottom-padding} #{$left-right-padding};
   display: grid;
-//   display: none;
+  //   display: block;
 }
 
 .header .sections .close-menu {
@@ -81,9 +96,19 @@ body {
   @include menuButton(#{$menu-height}, 1rem);
 }
 
+.features .features-btn:hover,
+.company .company-btn {
+  color: #{$almost-black};
+}
+
 .career,
 .about {
   @include menuButton(0.5rem, -20px);
+}
+
+.header .career:hover,
+.header .about:hover {
+  color: #{$almost-black};
 }
 
 .features .features-menu,
@@ -98,6 +123,7 @@ body {
   height: 12vh;
   @include flex();
   align-items: center;
+
   button {
     width: 70%;
     height: 5vh;
@@ -106,12 +132,123 @@ body {
     cursor: pointer;
     color: #{$medium-gray};
   }
+
   & > button + button {
     border: 1px solid black;
     border-radius: 2rem;
   }
+
   & > button:hover,
   & > button + button:hover {
-      color: #{$almost-black};
+    color: #{$almost-black};
   }
 }
+
+/* Ending  the header styles for mobile screens */
+
+/* Starting the header styles for desktop screens */
+
+@media only screen and (min-width: 786px) {
+  .container .header {
+    width: 100%;
+    height: 8vh;
+    padding: 2rem;
+    color: #{$medium-gray};
+  }
+
+  .header .logo-pic {
+    transform: translateY(-0.5rem);
+  }
+
+  .header .sections {
+    width: 80%;
+    height: 3vh;
+    position: fixed;
+    left: 10%;
+    top: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header .sections .features button,
+  .header .sections .company button {
+    width: 7rem;
+    height: 3rem;
+    background-color: transparent;
+    color: #{$medium-gray};
+    border: none;
+    font-size: medium;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1rem;
+    transform: translateY(-1rem);
+    margin-bottom: 0;
+  }
+
+  .header .sections .features .features-menu {
+    @include menuDesktop(9rem, 12rem);
+  }
+
+  .header .sections .features .features-menu div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: small;
+  }
+
+  .header .sections .company .company-menu {
+    @include menuDesktop(7rem, 10rem);
+  }
+
+  .header .sections .company .company-menu p {
+    font-size: small;
+    padding-left: 1.5rem;
+  }
+
+  .header .career,
+  .header .about {
+    width: 10rem;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    color: #{$medium-gray};
+    font-size: medium;
+    text-align: left;
+    transform: translateY(-1.5rem);
+  }
+
+  .header .career {
+    width: 2rem;
+  }
+
+  .far-buttons {
+    flex-direction: row;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .far-buttons button {
+    width: 40%;
+    height: 2rem;
+    border: none;
+    color: #{$medium-gray};
+    background-color: transparent;
+    font-size: medium;
+    transform: translateY(-2.2rem);
+  }
+
+  .far-buttons > button + button {
+    border: 1px solid #{$medium-gray};
+    border-radius: 1rem;
+  }
+
+  .header .sections .close-menu,
+  .header .burger-menu {
+    display: none;
+  }
+}
+
+/* Ending the header styles for desktop screens */

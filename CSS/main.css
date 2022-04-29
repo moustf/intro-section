@@ -34,14 +34,13 @@ body {
 }
 
 .header .sections {
-  width: 65%;
+  width: 70%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
-  background-color: #eee;
+  background-color: #fafafa;
   padding: 5rem 1rem;
-  display: -ms-grid;
   display: grid;
 }
 
@@ -87,6 +86,12 @@ body {
   align-items: center;
   cursor: pointer;
   color: dimgray;
+  cursor: pointer;
+}
+
+.features .features-btn:hover,
+.company .company-btn {
+  color: #141414;
 }
 
 .career,
@@ -108,6 +113,12 @@ body {
   align-items: center;
   cursor: pointer;
   color: dimgray;
+  cursor: pointer;
+}
+
+.header .career:hover,
+.header .about:hover {
+  color: #141414;
 }
 
 .features .features-menu,
@@ -143,7 +154,6 @@ body {
   -ms-flex-align: center;
   align-items: center;
 }
-
 .far-buttons button {
   width: 70%;
   height: 5vh;
@@ -152,14 +162,177 @@ body {
   cursor: pointer;
   color: dimgray;
 }
-
 .far-buttons > button + button {
   border: 1px solid black;
   border-radius: 2rem;
 }
-
 .far-buttons > button:hover,
 .far-buttons > button + button:hover {
   color: #141414;
 }
+
+/* Ending  the header styles for mobile screens */
+/* Starting the header styles for desktop screens */
+@media only screen and (min-width: 786px) {
+  .container .header {
+    width: 100%;
+    height: 8vh;
+    padding: 2rem;
+    color: dimgray;
+  }
+
+  .header .logo-pic {
+    -webkit-transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
+  }
+
+  .header .sections {
+    width: 80%;
+    height: 3vh;
+    position: fixed;
+    left: 10%;
+    top: 0;
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .header .sections .features button,
+  .header .sections .company button {
+    width: 7rem;
+    height: 3rem;
+    background-color: transparent;
+    color: dimgray;
+    border: none;
+    font-size: medium;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    -webkit-transform: translateY(-1rem);
+    transform: translateY(-1rem);
+    margin-bottom: 0;
+  }
+
+  .header .sections .features .features-menu {
+    height: 12rem;
+    width: 9rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.218);
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.218);
+    background-color: #fafafa;
+    margin-left: 0.8rem;
+    cursor: pointer;
+  }
+
+  .header .sections .features .features-menu div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    font-size: small;
+  }
+
+  .header .sections .company .company-menu {
+    height: 10rem;
+    width: 7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.218);
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.218);
+    background-color: #fafafa;
+    margin-left: 0.8rem;
+    cursor: pointer;
+  }
+
+  .header .sections .company .company-menu p {
+    font-size: small;
+    padding-left: 1.5rem;
+  }
+
+  .header .career,
+  .header .about {
+    width: 10rem;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    color: dimgray;
+    font-size: medium;
+    text-align: left;
+    -webkit-transform: translateY(-1.5rem);
+    transform: translateY(-1.5rem);
+  }
+
+  .header .career {
+    width: 2rem;
+  }
+
+  .far-buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .far-buttons button {
+    width: 40%;
+    height: 2rem;
+    border: none;
+    color: dimgray;
+    background-color: transparent;
+    font-size: medium;
+    -webkit-transform: translateY(-2.2rem);
+    transform: translateY(-2.2rem);
+  }
+
+  .far-buttons > button + button {
+    border: 1px solid dimgray;
+    border-radius: 1rem;
+  }
+
+  .header .sections .close-menu,
+  .header .burger-menu {
+    display: none;
+  }
+}
+/* Ending the header styles for desktop screens */
+
 /*# sourceMappingURL=main.css.map */
