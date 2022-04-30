@@ -39,7 +39,7 @@ arrowUpTwo.addEventListener("click", (e) => {
 });
 
 burgerBtn.onclick = function () {
-  sections.style.display = "grid";
+  sections.style.display = "flex";
   burgerBtn.style.display = "none";
   closeMenu.style.display = "block";
   wrapperDiv.style.display = "block";
