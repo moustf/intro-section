@@ -94,6 +94,10 @@ body {
   color: dimgray;
 }
 
+.logo-pic {
+  cursor: pointer;
+}
+
 .header .sections {
   width: 70%;
   height: 100vh;
@@ -305,6 +309,7 @@ body {
   font-size: larger;
   border: none;
   border-radius: 1rem;
+  cursor: pointer;
 }
 .container .main-content .main-content-info button:hover {
   border: 1px solid #141414;
@@ -323,6 +328,20 @@ body {
 }
 .container .main-content .links {
   grid-area: 3 / 1 / 4 / 2;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.container .main-content .links img {
+  cursor: pointer;
+  width: 70px;
 }
 
 /* Ending  the main content styles for mobile screens */
@@ -514,20 +533,27 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 4rem;
   }
   .container .main-content .main-content-info .title {
-    max-width: 540px;
-    font-size: 5rem;
+    max-width: 450px;
+    letter-spacing: 2px;
+    font-size: 4rem;
   }
   .container .main-content .main-content-info .paragraph {
-    max-width: 520px;
-    font-size: 1.5rem;
+    max-width: 450px;
+    font-size: 1.2rem;
     line-height: 2rem;
   }
   .container .main-content .main-content-info button {
     width: 180px;
     height: 3rem;
+  }
+  .container .main-content .main-content-info .links {
+    width: 550px;
+  }
+  .container .main-content .main-content-info .links img {
+    width: 100px;
   }
   .container .main-content .images {
     grid-area: 1 / 2 / 2 / 3;
