@@ -94,12 +94,9 @@ body {
   color: #{$medium-gray};
 }
 
-// .header .sections-wrapper {
-//   position: relative;
-//   z-index: 100;
-//   width: 70%;
-//   height: 100vh;
-// }
+.logo-pic {
+  cursor: pointer;
+}
 
 .header .sections {
   width: 70%;
@@ -244,6 +241,7 @@ body {
         font-size: larger;
         border: none;
         border-radius: 1rem;
+        cursor: pointer;
       }
       button:hover {
         border: 1px solid #{$almost-black};
@@ -263,6 +261,14 @@ body {
     }
     .links {
       grid-area: 3 / 1 / 4 / 2;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & img {
+        cursor: pointer;
+        width: 70px;
+      }
     }
   }
 }
@@ -399,19 +405,26 @@ body {
         text-align: left;
         align-items: flex-start;
         justify-content: center;
-        gap: 3rem;
+        gap: 4rem;
         .title {
-          max-width: 540px;
-          font-size: 5rem;
+          max-width: 450px;
+          letter-spacing: 2px;
+          font-size: 4rem;
         }
         .paragraph {
-          max-width: 520px;
-          font-size: 1.5rem;
+          max-width: 450px;
+          font-size: 1.2rem;
           line-height: 2rem;
         }
         button {
           width: 180px;
           height: 3rem;
+        }
+        .links {
+          width: 550px;
+          & img {
+            width: 100px;
+          }
         }
       }
       .images {
