@@ -11,6 +11,17 @@ const burgerBtn = document.querySelector(".burger-menu");
 const sections = document.querySelector(".sections");
 const closeMenu = document.querySelector(".close-menu");
 const wrapperDiv = document.querySelector(".wrapper");
+const links = document.querySelector(".links");
+const linksImgs = document.querySelectorAll(".links img");
+
+// ? Creating an array of links to use it in the images loop.
+
+const linksArray = [
+  "https://www.databizsolutions.ie/",
+  "https://www.audiophile.ph/",
+  "https://meet.google.com/",
+  "https://www.maker.co/",
+];
 
 // ? Adding the event listeners to the elements when click occurs.
 
@@ -50,4 +61,14 @@ closeMenu.onclick = () => {
   sections.style.display = "none";
   burgerBtn.style.display = "block";
   wrapperDiv.style.display = "none";
+};
+
+// ? looping over the linksImgs to and add links from array.
+
+links.onclick = (e) => {
+  linksImgs.forEach((image, ind) => {
+    if (e.target === image) {
+      window.open(linksArray[ind], "_blank");
+    }
+  });
 };
