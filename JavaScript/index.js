@@ -1,6 +1,4 @@
 // ? Targeting the needed elements.
-const featuresBtn = document.querySelector(".features-btn");
-const companyBtn = document.querySelector(".company-btn");
 const featuresMenu = document.querySelector(".features-menu");
 const companyMenu = document.querySelector(".company-menu");
 const arrowDownOne = document.getElementsByClassName("arrow-down")[0];
@@ -22,6 +20,25 @@ const linksArray = [
   "https://meet.google.com/",
   "https://www.maker.co/",
 ];
+
+
+// ? A function to use with arrows.
+// ! Not ready.
+
+// function arrowClick(var1, callback) {
+//   var1.addEventListener("click", _ => {
+//     callback();
+//     var1.style.display = "none";
+//     var1.style.display = "block";
+//   });
+// }
+
+// * Implementation example: 
+
+// arrowClick(arrowDownOne, function() {
+//   featuresMenu.style.display = "flex";
+// });
+
 
 // ? Adding the event listeners to the elements when click occurs.
 
