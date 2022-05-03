@@ -46,10 +46,9 @@ your projects.
 
 ## ♦ Design Images:
 
-![desktop-design](https://user-images.githubusercontent.com/77394697/165775069-cc4e80a9-d0ac-406d-b3f7-66d02496b7ee.jpg)
-![mobile-design](https://user-images.githubusercontent.com/77394697/165775166-a6a33bb4-afdc-4eb8-9031-2bf1d54522f2.jpg)
-![mobile-menu-expanded](https://user-images.githubusercontent.com/77394697/165775173-966f7d10-2f05-41c9-ae71-9a9ab4631712.jpg)
-![active-states](https://user-images.githubusercontent.com/77394697/165775175-4f38cb37-ce15-4d3a-aa58-7042a48c6cf5.jpg)
+![image](https://user-images.githubusercontent.com/77394697/166426604-4dae66fb-7965-439c-a6ab-d43e9303875f.png)
+![Screen Shot 2022-05-03 at 11 51 12](https://user-images.githubusercontent.com/77394697/166427081-8143f8cc-5d7e-43df-b3be-6ae00b30418e.png)
+![Screen Shot 2022-05-03 at 11 52 08](https://user-images.githubusercontent.com/77394697/166427207-8ce9f7d2-ddbf-42b7-8161-fb4f93320ab2.png)
 
 ## ♦ Challenge link from [HERE](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5/hub/intro-section-with-dropdown-navigation-Syeu-NEHc).
 
