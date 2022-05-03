@@ -54,20 +54,25 @@ $menu-height: 5vh;
     left: 0;
     top: 0;
   }
+
   25% {
     left: 420px;
     top: 0;
   }
+
   49% {
     transform: rotate(90deg);
   }
+
   50% {
     left: 420px;
     top: 580px;
   }
+
   51% {
     transform: rotate(90deg);
   }
+
   75% {
     left: 420px;
     top: 0;
@@ -92,113 +97,113 @@ body {
   justify-content: space-between;
   padding: 1rem;
   color: #{$medium-gray};
-}
 
-.logo-pic {
-  cursor: pointer;
-}
-
-.header .sections {
-  width: 70%;
-  height: 100vh;
-  position: fixed;
-  right: 0;
-  top: 0;
-  background-color: #{$almost-white};
-  padding: #{$top-bottom-padding} #{$left-right-padding};
-  display: flex;
-  flex-direction: column;
-  display: none;
-  z-index: 10;
-}
-
-.burger-menu {
-  cursor: pointer;
-}
-
-.header .sections .close-menu {
-  position: fixed;
-  transform: translate(12rem, -3rem);
-  cursor: pointer;
-}
-
-.wrapper {
-  width: 30%;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.73);
-  display: none;
-}
-
-.arrow-up {
-  display: none;
-}
-
-.features .features-menu div {
-  width: 55%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.features button,
-.company button {
-  @include menuButton(#{$menu-height}, 1rem);
-}
-
-.features .features-btn:hover,
-.company .company-btn:hover {
-  color: #{$almost-black};
-}
-
-.features .features-btn img,
-.company .company-btn img {
-  width: 1rem;
-}
-
-.career,
-.about {
-  @include menuButton(4rem, -20px);
-}
-
-.header .career:hover,
-.header .about:hover {
-  color: #{$almost-black};
-}
-
-.features .features-menu,
-.company .company-menu {
-  height: 15vh;
-  @include flex();
-  margin-left: 2rem;
-  display: none;
-}
-
-.far-buttons {
-  width: 100%;
-  height: 12vh;
-  @include flex();
-  align-items: center;
-
-  button {
-    width: 70%;
-    height: 5vh;
-    border: none;
-    background-color: transparent;
+  .logo-pic {
     cursor: pointer;
-    color: #{$medium-gray};
   }
 
-  & > button + button {
-    border: 1px solid black;
-    border-radius: 2rem;
+  .sections {
+    width: 70%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #{$almost-white};
+    padding: #{$top-bottom-padding} #{$left-right-padding};
+    display: flex;
+    flex-direction: column;
+    display: none;
+    z-index: 10;
+
+    .close-menu {
+      position: fixed;
+      transform: translate(12rem, -3rem);
+      cursor: pointer;
+    }
   }
 
-  & > button:hover,
-  & > button + button:hover {
+  .burger-menu {
+    cursor: pointer;
+  }
+
+  .wrapper {
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.73);
+    display: none;
+  }
+
+  .arrow-up {
+    display: none;
+  }
+
+  .features .features-menu,
+  .company .company-menu {
+    height: 15vh;
+    @include flex();
+    margin-left: 2rem;
+    display: none;
+  }
+
+  .features .features-menu div {
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .features button,
+  .company button {
+    @include menuButton(#{$menu-height}, 1rem);
+  }
+
+  .features .features-btn:hover,
+  .company .company-btn:hover {
     color: #{$almost-black};
+  }
+
+  .features .features-btn img,
+  .company .company-btn img {
+    width: 1rem;
+  }
+
+  .career,
+  .about {
+    @include menuButton(4rem, -20px);
+  }
+
+  .career:hover,
+  .about:hover {
+    color: #{$almost-black};
+  }
+
+  .far-buttons {
+    width: 100%;
+    height: 12vh;
+    @include flex();
+    align-items: center;
+
+    button {
+      width: 70%;
+      height: 5vh;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      color: #{$medium-gray};
+    }
+
+    &>button+button {
+      border: 1px solid black;
+      border-radius: 2rem;
+    }
+
+    &>button:hover,
+    &>button+button:hover {
+      color: #{$almost-black};
+    }
   }
 }
 
@@ -215,6 +220,7 @@ body {
     grid-template-rows: 1fr 1fr auto;
     grid-template-columns: 1fr;
     z-index: 0;
+
     .main-content-info {
       position: relative;
       z-index: 0;
@@ -225,14 +231,17 @@ body {
       flex-direction: column;
       gap: 2rem;
       align-items: center;
+
       .title {
         font-size: xx-large;
       }
+
       .paragraph {
         font-size: larger;
         letter-spacing: -1px;
         color: #{$medium-gray};
       }
+
       button {
         width: 40%;
         height: 3.5rem;
@@ -243,28 +252,34 @@ body {
         border-radius: 1rem;
         cursor: pointer;
       }
+
       button:hover {
         border: 1px solid #{$almost-black};
         background-color: transparent;
         color: #{$almost-black};
       }
     }
+
     .images {
       grid-area: 1 / 1 / 2 / 2;
       margin-top: 1rem;
+
       .hero-image-mobile {
         width: 100%;
       }
+
       .hero-image-desktop {
         display: none;
       }
     }
+
     .links {
       grid-area: 3 / 1 / 4 / 2;
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       & img {
         cursor: pointer;
         width: 70px;
@@ -283,108 +298,131 @@ body {
     height: 8vh;
     padding: 2rem;
     color: #{$medium-gray};
-  }
 
-  .header .sections {
-    width: 80%;
-    height: 3vh;
-    position: fixed;
-    left: 10%;
-    top: 0;
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+    .logo-pic {
+      transform: translateY(0.3rem);
+    }
 
-  .header .sections .features button,
-  .header .sections .company button {
-    width: 10rem;
-    height: 3rem;
-    background-color: transparent;
-    color: #{$medium-gray};
-    border: none;
-    font-size: medium;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 1rem;
-    // transform: translateY(-1rem);
-    margin-bottom: 0;
-  }
+    .wrapper {
+      display: none;
+    }
 
-  .header .sections .features button img,
-  .header .sections .company button img {
-    margin-left: 1rem;
-  }
+    .sections {
+      width: 80%;
+      height: 3vh;
+      position: fixed;
+      left: 10%;
+      top: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
-  .header .sections .features .features-menu {
-    @include menuDesktop(9rem, 12rem);
-    display: none;
-  }
+      .features {
+        .features-menu {
+          @include menuDesktop(9rem, 12rem);
+          display: none;
 
-  .header .sections .features .features-menu div {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: small;
-  }
+          div {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: small;
+          }
+        }
+      }
 
-  .header .sections .company .company-menu {
-    @include menuDesktop(7rem, 10rem);
-    display: none;
-  }
+      .features button,
+      .company button {
+        width: 10rem;
+        height: 3rem;
+        background-color: transparent;
+        color: #{$medium-gray};
+        border: none;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1rem;
+        // transform: translateY(-1rem);
+        margin-bottom: 0;
+      }
 
-  .header .sections .company .company-menu p {
-    font-size: small;
-    padding-left: 1.5rem;
-  }
+      .features .features-btn:hover,
+      .company .company-btn:hover {
+        color: #{$almost-black};
+      }
 
-  .header .career,
-  .header .about {
-    width: 10rem;
-    height: 3rem;
-    background-color: transparent;
-    border: none;
-    color: #{$medium-gray};
-    font-size: medium;
-    text-align: left;
-    transform: translateY(-0.5rem);
-  }
+      .features button img,
+      .company button img {
+        margin-left: 1rem;
+      }
 
-  .header .career {
-    width: 2rem;
-  }
+      .company {
+        .company-menu {
+          @include menuDesktop(7rem, 10rem);
+          display: none;
 
-  .far-buttons {
-    flex-direction: row;
-    width: 40%;
-    display: flex;
-    justify-content: flex-end;
-  }
+          p {
+            font-size: small;
+            padding-left: 1.5rem;
+          }
+        }
+      }
+    }
 
-  .far-buttons button {
-    width: 40%;
-    height: 2rem;
-    border: none;
-    color: #{$medium-gray};
-    background-color: transparent;
-    font-size: medium;
-    transform: translateY(-2.2rem);
-  }
+    .career,
+    .about {
+      width: 10rem;
+      height: 3rem;
+      background-color: transparent;
+      border: none;
+      color: #{$medium-gray};
+      font-size: medium;
+      text-align: left;
+      transform: translateY(-0.5rem);
+    }
 
-  .far-buttons > button + button {
-    border: 1px solid #{$medium-gray};
-    border-radius: 1rem;
-  }
+    .career {
+      width: 2rem;
+    }
 
-  .header .sections .close-menu,
-  .header .burger-menu {
-    display: none;
-  }
+    .far-buttons {
+      flex-direction: row;
+      width: 40%;
+      display: flex;
+      justify-content: flex-end;
 
-  .wrapper {
-    display: none;
+      button {
+        width: 40%;
+        height: 2rem;
+        border: none;
+        color: #{$medium-gray};
+        background-color: transparent;
+        font-size: medium;
+        transform: translateY(-2rem);
+      }
+
+      &>button+button {
+        border: 1px solid #{$medium-gray};
+        border-radius: 1rem;
+      }
+    }
+
+    .sections .close-menu,
+    .burger-menu {
+      display: none;
+    }
+
+    .career:hover,
+    .about:hover {
+      color: #{$almost-black};
+    }
+
+    .far-buttons>button:hover,
+    .far-buttons>button+button:hover {
+      color: #{$almost-black};
+    }
   }
 }
 
@@ -398,6 +436,7 @@ body {
       grid-template-columns: 1fr auto;
       grid-template-rows: 1fr;
       padding: 0 10rem;
+
       .main-content-info {
         grid-area: 1 / 1 / 2 / 2;
         // height: 70vh;
@@ -406,31 +445,38 @@ body {
         align-items: flex-start;
         justify-content: center;
         gap: 4rem;
+
         .title {
           max-width: 450px;
           letter-spacing: 2px;
           font-size: 4rem;
         }
+
         .paragraph {
           max-width: 450px;
           font-size: 1.2rem;
           line-height: 2rem;
         }
+
         button {
           width: 180px;
           height: 3rem;
         }
+
         .links {
           width: 550px;
+
           & img {
             width: 100px;
           }
         }
       }
+
       .images {
         grid-area: 1 / 2 / 2 / 3;
         padding: 2rem 0;
         position: relative;
+
         &::before {
           content: "";
           display: block;
@@ -444,11 +490,13 @@ body {
           border-radius: 0.5rem;
           animation: image-animation 5s linear infinite;
         }
+
         .hero-image-desktop {
           width: 100%;
           height: 75vh;
           display: block;
         }
+
         .hero-image-mobile {
           display: none;
         }
